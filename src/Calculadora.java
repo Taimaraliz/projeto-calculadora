@@ -3,21 +3,20 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Calculadora {
-	private double x;
 
-	public static double somar(int x, int y) throws ArithmeticException {
+	public static int soma(int x, int y) throws ArithmeticException {
 		return y + x;
 	}
 
-	public static double multiplicar(int x, int y) throws ArithmeticException {
+	public static int multiplicacao(int x, int y) throws ArithmeticException {
 		return x * y;
 	}
 
-	public static double subtrair(int x, int y) throws ArithmeticException {
+	public static int subtracao(int x, int y) throws ArithmeticException {
 		return x - y;
 	}
 
-	public static double dividir(int x, int y) throws ArithmeticException {
+	public static int dividisao(int x, int y) throws ArithmeticException {
 		return x / y;
 	}
 
@@ -64,20 +63,20 @@ public class Calculadora {
 			switch (escolha) {
 			
 			case 1:
-				System.out.println("Resultado: " + somar(var1, var2));
+				System.out.printf("Resultado: " + soma(var1, var2));
 				continua = false;
 				break;
 			case 2:
-				System.out.println("Resultado: " + subtrair(var1, var2));
+				System.out.printf("Resultado: " + subtracao(var1, var2));
 				break;
 			case 3:
-				System.out.println("Resultado: " + multiplicar(var1, var2));
+				System.out.printf("Resultado: " + multiplicacao(var1, var2));
 				break;
 			case 4:
-				System.out.println("Resultado: " + dividir(var1, var2));
+				System.out.printf("Resultado: " + dividisao(var1, var2));
 				break;
 			default:
-				System.out.println("Opção inválida");
+				System.out.printf("Opção inválida");
 				
 				continua = false;
 			}
@@ -100,19 +99,23 @@ public class Calculadora {
 			
 			continua = true;
 		
+			}
+			
 		}while(continua);
 		
-		System.out.println("Deseja fazer mais alguma operação? (s/n)");
+		System.out.println("Deseja fazer mais alguma operação (s/n)?");
 		String entrada = sc.nextLine();
 		
 		if (entrada.equalsIgnoreCase("s")) {
 			
-			String continuar = sc.nextLine();
+			//String continuar = sc.nextLine();
+			
+			continua = true;
 			
 			
 		}else {
 			System.out.println("-------Fim-------");
-			}
 		}
 	}
 }
+
