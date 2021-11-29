@@ -5,7 +5,7 @@ public class Calculadora {
 	private double y;
 	
 	public double soma(double x, double y) {
-		return y + x;
+		return x + y;
 	}
 
 	public double multiplicacao(double x, double y) {
